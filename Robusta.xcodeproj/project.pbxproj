@@ -9,23 +9,28 @@
 /* Begin PBXBuildFile section */
 		0079A80E29D99E1600657193 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079A80D29D99E1600657193 /* AppDelegate.swift */; };
 		0079A81029D99E1600657193 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079A80F29D99E1600657193 /* SceneDelegate.swift */; };
-		0079A81229D99E1600657193 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079A81129D99E1600657193 /* ViewController.swift */; };
-		0079A81529D99E1600657193 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0079A81329D99E1600657193 /* Main.storyboard */; };
 		0079A81829D99E1600657193 /* Robusta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0079A81629D99E1600657193 /* Robusta.xcdatamodeld */; };
 		0079A81A29D99E1B00657193 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0079A81929D99E1B00657193 /* Assets.xcassets */; };
 		0079A81D29D99E1B00657193 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0079A81B29D99E1B00657193 /* LaunchScreen.storyboard */; };
+		0079A82629D99E8A00657193 /* RxReachability in Frameworks */ = {isa = PBXBuildFile; productRef = 0079A82529D99E8A00657193 /* RxReachability */; };
+		0079A82929D99EB800657193 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0079A82829D99EB800657193 /* RxCocoa */; };
+		0079A82B29D99EB800657193 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 0079A82A29D99EB800657193 /* RxRelay */; };
+		0079A82D29D99EB800657193 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0079A82C29D99EB800657193 /* RxSwift */; };
+		0079A83029D99F0200657193 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0079A82F29D99F0200657193 /* Alamofire */; };
+		0079A83229D99F5F00657193 /* readme in Resources */ = {isa = PBXBuildFile; fileRef = 0079A83129D99F5F00657193 /* readme */; };
+		0079A83629D9A03F00657193 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0079A83529D9A03F00657193 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0079A80A29D99E1600657193 /* Robusta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Robusta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0079A80D29D99E1600657193 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0079A80F29D99E1600657193 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0079A81129D99E1600657193 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0079A81429D99E1600657193 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0079A81729D99E1600657193 /* Robusta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Robusta.xcdatamodel; sourceTree = "<group>"; };
 		0079A81929D99E1B00657193 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0079A81C29D99E1B00657193 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0079A81E29D99E1B00657193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0079A83129D99F5F00657193 /* readme */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme; sourceTree = "<group>"; };
+		0079A83529D9A03F00657193 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0079A83029D99F0200657193 /* Alamofire in Frameworks */,
+				0079A82B29D99EB800657193 /* RxRelay in Frameworks */,
+				0079A82929D99EB800657193 /* RxCocoa in Frameworks */,
+				0079A82D29D99EB800657193 /* RxSwift in Frameworks */,
+				0079A82629D99E8A00657193 /* RxReachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +52,7 @@
 		0079A80129D99E1600657193 = {
 			isa = PBXGroup;
 			children = (
+				0079A83129D99F5F00657193 /* readme */,
 				0079A80C29D99E1600657193 /* Robusta */,
 				0079A80B29D99E1600657193 /* Products */,
 			);
@@ -58,16 +69,31 @@
 		0079A80C29D99E1600657193 /* Robusta */ = {
 			isa = PBXGroup;
 			children = (
+				0079A83429D99FD400657193 /* Resources */,
+				0079A83329D99FBD00657193 /* Delegation */,
+				0079A81B29D99E1B00657193 /* LaunchScreen.storyboard */,
+			);
+			path = Robusta;
+			sourceTree = "<group>";
+		};
+		0079A83329D99FBD00657193 /* Delegation */ = {
+			isa = PBXGroup;
+			children = (
 				0079A80D29D99E1600657193 /* AppDelegate.swift */,
 				0079A80F29D99E1600657193 /* SceneDelegate.swift */,
-				0079A81129D99E1600657193 /* ViewController.swift */,
-				0079A81329D99E1600657193 /* Main.storyboard */,
+			);
+			path = Delegation;
+			sourceTree = "<group>";
+		};
+		0079A83429D99FD400657193 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				0079A81929D99E1B00657193 /* Assets.xcassets */,
-				0079A81B29D99E1B00657193 /* LaunchScreen.storyboard */,
+				0079A83529D9A03F00657193 /* Colors.xcassets */,
 				0079A81E29D99E1B00657193 /* Info.plist */,
 				0079A81629D99E1600657193 /* Robusta.xcdatamodeld */,
 			);
-			path = Robusta;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +112,13 @@
 			dependencies = (
 			);
 			name = Robusta;
+			packageProductDependencies = (
+				0079A82529D99E8A00657193 /* RxReachability */,
+				0079A82829D99EB800657193 /* RxCocoa */,
+				0079A82A29D99EB800657193 /* RxRelay */,
+				0079A82C29D99EB800657193 /* RxSwift */,
+				0079A82F29D99F0200657193 /* Alamofire */,
+			);
 			productName = Robusta;
 			productReference = 0079A80A29D99E1600657193 /* Robusta.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +147,11 @@
 				Base,
 			);
 			mainGroup = 0079A80129D99E1600657193;
+			packageReferences = (
+				0079A82429D99E8A00657193 /* XCRemoteSwiftPackageReference "RxReachability" */,
+				0079A82729D99EB800657193 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				0079A82E29D99F0200657193 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 0079A80B29D99E1600657193 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,9 +166,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0079A83229D99F5F00657193 /* readme in Resources */,
+				0079A83629D9A03F00657193 /* Colors.xcassets in Resources */,
 				0079A81D29D99E1B00657193 /* LaunchScreen.storyboard in Resources */,
 				0079A81A29D99E1B00657193 /* Assets.xcassets in Resources */,
-				0079A81529D99E1600657193 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +181,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0079A81829D99E1600657193 /* Robusta.xcdatamodeld in Sources */,
-				0079A81229D99E1600657193 /* ViewController.swift in Sources */,
 				0079A80E29D99E1600657193 /* AppDelegate.swift in Sources */,
 				0079A81029D99E1600657193 /* SceneDelegate.swift in Sources */,
 			);
@@ -151,14 +189,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0079A81329D99E1600657193 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0079A81429D99E1600657193 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0079A81B29D99E1B00657193 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +324,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Robusta/Info.plist;
+				INFOPLIST_FILE = Robusta/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -321,7 +351,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Robusta/Info.plist;
+				INFOPLIST_FILE = Robusta/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -362,6 +392,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0079A82429D99E8A00657193 /* XCRemoteSwiftPackageReference "RxReachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxReachability";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		0079A82729D99EB800657193 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		0079A82E29D99F0200657193 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0079A82529D99E8A00657193 /* RxReachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0079A82429D99E8A00657193 /* XCRemoteSwiftPackageReference "RxReachability" */;
+			productName = RxReachability;
+		};
+		0079A82829D99EB800657193 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0079A82729D99EB800657193 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		0079A82A29D99EB800657193 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0079A82729D99EB800657193 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		0079A82C29D99EB800657193 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0079A82729D99EB800657193 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		0079A82F29D99F0200657193 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0079A82E29D99F0200657193 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		0079A81629D99E1600657193 /* Robusta.xcdatamodeld */ = {

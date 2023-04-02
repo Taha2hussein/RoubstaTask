@@ -1,0 +1,4 @@
+1- i use MVVM-C with RxSwift
+2-i use lazy loading to download images
+3-use Alamofire
+4-swiftInject
