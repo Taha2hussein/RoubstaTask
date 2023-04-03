@@ -9,10 +9,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxRelay
-import SwiftUI
 
 class HomeViewController: BaseWireframe<HomeViewModel> {
-
+    
+    @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var githubTableView: UITableView!
     
     override func viewDidLoad() {
@@ -21,19 +21,8 @@ class HomeViewController: BaseWireframe<HomeViewModel> {
         viewModel.viewDidLoad()
         selectGithubRpose()
         subscribeToNavigateToDetails()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        // Hide the navigation bar on the this view controller
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-        // Show the navigation bar on other view controllers
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        initialSetup()
+        subscribeOnFilterText()
     }
     
     func intializeCells() {
@@ -60,5 +49,21 @@ class HomeViewController: BaseWireframe<HomeViewModel> {
                     self.viewModel.didSelectRepo(inedxPath: repo)
                 }
             } .disposed(by: self.disposeBag)
+    }
+
+    func subscribeOnFilterText() {
+        viewModel.filterText.subscribe(onNext: { [weak self] text in
+            guard let self = self else {return}
+            self.viewModel.filterRepos(withString: text)
+        }).disposed(by: disposeBag)
+    }
+    
+    private func initialSetup() {
+        searchTextField.rx.text
+            .subscribe(onNext: { [weak self] text in
+                guard let self = self else {return}
+                self.viewModel.filterText.accept(text?.lowercased() ?? "")
+            })
+            .disposed(by: disposeBag)
     }
 }

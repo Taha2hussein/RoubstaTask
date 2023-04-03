@@ -8,7 +8,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
-
+import RxRelay
 protocol HomeViewModelnputProtocol {
     func viewDidLoad()
     func didSelectRepo(inedxPath: IndexPath)
@@ -19,11 +19,13 @@ protocol HomeViewModeOutputProtocol {
 }
 
 class HomeViewModel: BaseViewModel, HomeViewModelnputProtocol, HomeViewModeOutputProtocol {
-    
-    private var _githubRepo = PublishSubject<[UserElement]>.init()
+    let filterText:BehaviorRelay<String> = BehaviorRelay<String>(value:"")
+    var filteredItems = PublishSubject<[UserElement]>.init()
     var githubRepoObservable: Observable<[UserElement]> {
-        return _githubRepo
+            return filteredItems
+
     }
+    var githubReposToFilter: [UserElement] = []
     var githubRepos: [UserElement] = []
     var navigateToNextView: PublishSubject<UserElement> = .init()
     let homeUseCase: HomeUseCase
@@ -32,8 +34,7 @@ class HomeViewModel: BaseViewModel, HomeViewModelnputProtocol, HomeViewModeOutpu
     init(homeUseCase: HomeUseCase) {
         self.homeUseCase = homeUseCase
     }
-    
-    
+
     func viewDidLoad() {
         fetchPopularRepo()
     }
@@ -49,11 +50,24 @@ class HomeViewModel: BaseViewModel, HomeViewModelnputProtocol, HomeViewModeOutpu
                 guard let self = self else {return}
                 self.isLoading.onNext(false)
                 self.githubRepos = repoData
-                self._githubRepo.onNext(repoData)
+                self.githubReposToFilter = repoData
+                self.filteredItems.onNext(repoData)
             } onError: { _ in
                 self.isLoading.onNext(false)
             } onCompleted: {
                 self.isLoading.onNext(false)
             } .disposed(by: self.disposeBag)
+    }
+    
+    @discardableResult  func filterRepos(withString filter:String) -> [UserElement] {
+        var filteredRepos = self.githubReposToFilter
+        if filter.count > 0 {
+            filteredRepos = self.githubReposToFilter.filter({
+                return $0.name?.lowercased().contains(filter.lowercased()) as! Bool
+            })
+        }
+        self.githubRepos = filteredRepos
+        self.filteredItems.onNext(filteredRepos)
+        return filteredRepos
     }
 }
