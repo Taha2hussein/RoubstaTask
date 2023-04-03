@@ -6,26 +6,26 @@ class MainNavigator: Navigator {
     
     enum Destination {
         case HomeViewController
-        case itemDetails
+        case itemDetails(repo: UserElement)
     }
     
     required init(coordinator: Coordinator) {
         self.coordinator = coordinator
     }
 
-    func viewController(for destination: Destination, coordinator: Coordinator) -> UIViewController {
+    func viewController(for destination: Destination, coordinator: Coordinator)-> UIViewController {
         switch destination {
         case .HomeViewController:
+            
             let homeRepo = HomeRepositry()
             let homeUseCase = HomeUseCase(homeRepo: homeRepo)
             let viewModel = HomeViewModel(homeUseCase: homeUseCase)
             let view = HomeViewController(viewModel: viewModel, coordinator: coordinator)
             return view
-        case .itemDetails:
-//            let homeDetailViewModel = HomeDetailViewModel(product: product)
-//            let view = HomeDetailsViewController(viewModel: homeDetailViewModel, coordinator: coordinator)
-            let view = UIViewController()
-
+            
+        case .itemDetails(let repo):
+            let homeDetailViewModel = HomeDetailViewModel(githubRepo: repo)
+            let view = HomeDetailViewController(viewModel: homeDetailViewModel, coordinator: coordinator)
             return view
         }
     }

@@ -19,11 +19,13 @@
 		0079A83029D99F0200657193 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0079A82F29D99F0200657193 /* Alamofire */; };
 		0079A83229D99F5F00657193 /* readme in Resources */ = {isa = PBXBuildFile; fileRef = 0079A83129D99F5F00657193 /* readme */; };
 		0079A83629D9A03F00657193 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0079A83529D9A03F00657193 /* Colors.xcassets */; };
+		00DB110529DA0D8E003CDA6A /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DB110329DA0D8E003CDA6A /* HomeDetailViewController.swift */; };
+		00DB110629DA0D8E003CDA6A /* HomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00DB110429DA0D8E003CDA6A /* HomeDetailViewController.xib */; };
+		00DB110829DAB1B2003CDA6A /* HomeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DB110729DAB1B2003CDA6A /* HomeDetailViewModel.swift */; };
 		00EE712E29D9A1C9009F8205 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE712429D9A1C9009F8205 /* BaseWireframe.swift */; };
 		00EE712F29D9A1C9009F8205 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE712529D9A1C9009F8205 /* BaseViewModel.swift */; };
 		00EE713029D9A1C9009F8205 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE712729D9A1C9009F8205 /* AppCoordinator.swift */; };
 		00EE713129D9A1C9009F8205 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE712929D9A1C9009F8205 /* MainNavigator.swift */; };
-		00EE713229D9A1C9009F8205 /* CartNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE712A29D9A1C9009F8205 /* CartNavigator.swift */; };
 		00EE713429D9A1C9009F8205 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE712D29D9A1C9009F8205 /* Navigator.swift */; };
 		00EE713D29D9A1F2009F8205 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE713629D9A1F2009F8205 /* UIView+Extensions.swift */; };
 		00EE713E29D9A1F2009F8205 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE713729D9A1F2009F8205 /* UIColor+Extensions.swift */; };
@@ -59,11 +61,13 @@
 		0079A81E29D99E1B00657193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0079A83129D99F5F00657193 /* readme */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme; sourceTree = "<group>"; };
 		0079A83529D9A03F00657193 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		00DB110329DA0D8E003CDA6A /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
+		00DB110429DA0D8E003CDA6A /* HomeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDetailViewController.xib; sourceTree = "<group>"; };
+		00DB110729DAB1B2003CDA6A /* HomeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewModel.swift; sourceTree = "<group>"; };
 		00EE712429D9A1C9009F8205 /* BaseWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		00EE712529D9A1C9009F8205 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		00EE712729D9A1C9009F8205 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		00EE712929D9A1C9009F8205 /* MainNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
-		00EE712A29D9A1C9009F8205 /* CartNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartNavigator.swift; sourceTree = "<group>"; };
 		00EE712D29D9A1C9009F8205 /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		00EE713629D9A1F2009F8205 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		00EE713729D9A1F2009F8205 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
@@ -161,6 +165,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		00DB110229DA0D73003CDA6A /* Home Detail */ = {
+			isa = PBXGroup;
+			children = (
+				00DB110329DA0D8E003CDA6A /* HomeDetailViewController.swift */,
+				00DB110429DA0D8E003CDA6A /* HomeDetailViewController.xib */,
+				00DB110729DAB1B2003CDA6A /* HomeDetailViewModel.swift */,
+			);
+			path = "Home Detail";
+			sourceTree = "<group>";
+		};
 		00EE712329D9A1C9009F8205 /* BaseWireFrame */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,7 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				00EE712929D9A1C9009F8205 /* MainNavigator.swift */,
-				00EE712A29D9A1C9009F8205 /* CartNavigator.swift */,
 			);
 			path = Navigator;
 			sourceTree = "<group>";
@@ -247,6 +260,7 @@
 		00EE715A29D9A6CF009F8205 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				00DB110229DA0D73003CDA6A /* Home Detail */,
 				00EE715F29D9A6F8009F8205 /* Home  */,
 			);
 			path = Modules;
@@ -363,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00DB110629DA0D8E003CDA6A /* HomeDetailViewController.xib in Resources */,
 				00EE717829D9BCB3009F8205 /* GithubTableViewCell.xib in Resources */,
 				0079A83229D99F5F00657193 /* readme in Resources */,
 				0079A83629D9A03F00657193 /* Colors.xcassets in Resources */,
@@ -379,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00DB110529DA0D8E003CDA6A /* HomeDetailViewController.swift in Sources */,
 				00EE713129D9A1C9009F8205 /* MainNavigator.swift in Sources */,
 				00EE716629D9A9AE009F8205 /* GithubModel.swift in Sources */,
 				00EE714029D9A1F2009F8205 /* UITableView+Extensions.swift in Sources */,
@@ -394,12 +410,12 @@
 				00EE717A29D9DDFC009F8205 /* LazyImageView.swift in Sources */,
 				00EE715829D9A4EC009F8205 /* ResponseObject.swift in Sources */,
 				0079A81829D99E1600657193 /* Robusta.xcdatamodeld in Sources */,
-				00EE713229D9A1C9009F8205 /* CartNavigator.swift in Sources */,
 				00EE716229D9A712009F8205 /* HomeViewController.swift in Sources */,
 				00EE714629D9A200009F8205 /* NibLoadingView.swift in Sources */,
 				00EE714729D9A200009F8205 /* AppStoryboard.swift in Sources */,
 				00EE712F29D9A1C9009F8205 /* BaseViewModel.swift in Sources */,
 				00EE713E29D9A1F2009F8205 /* UIColor+Extensions.swift in Sources */,
+				00DB110829DAB1B2003CDA6A /* HomeDetailViewModel.swift in Sources */,
 				0079A80E29D99E1600657193 /* AppDelegate.swift in Sources */,
 				00EE716829D9AD54009F8205 /* HomeViewModel.swift in Sources */,
 				0079A81029D99E1600657193 /* SceneDelegate.swift in Sources */,
@@ -551,7 +567,6 @@
 				INFOPLIST_FILE = Robusta/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -579,7 +594,6 @@
 				INFOPLIST_FILE = Robusta/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

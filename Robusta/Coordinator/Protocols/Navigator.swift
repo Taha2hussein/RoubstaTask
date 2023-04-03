@@ -1,5 +1,4 @@
 
-import Foundation
 import UIKit
 
 enum NavigatorTypes {
@@ -14,20 +13,20 @@ protocol Navigator {
     func viewController(for destination: Destination, coordinator: Coordinator) -> UIViewController
     init(coordinator: Coordinator)
     var coordinator: Coordinator { get }
-    func navigate(to destination: Destination, with navigationType: NavigatorTypes)
+    func navigate(from view: UIViewController, to destination: Destination, with navigationType: NavigatorTypes)
 }
 
 extension Navigator {
-    func navigate(to destination: Destination,
+    func navigate(from view: UIViewController,
+                  to destination: Destination,
                   with navigationType: NavigatorTypes = .push) {
-        let viewController = self.viewController(for: destination, coordinator: coordinator)
+        let viewController = self.viewController(for: destination, coordinator: self.coordinator)
         switch navigationType {
         case .push:
-            coordinator.navigationController?.pushViewController(viewController, animated: true)
+            view.navigationController?.pushViewController(viewController, animated: true)
         case .present:
-            viewController.modalPresentationStyle = .overCurrentContext
-            coordinator.navigationController?.present(viewController, animated: true, completion: nil)
-//            coordinator.tabBar.present(viewController, animated: true, completion: nil)
+            viewController.modalPresentationStyle = .fullScreen
+            view.present(viewController, animated: true, completion: nil)
         case .presentWithNavigation:
             let newVC = self.viewController(for: destination, coordinator: coordinator.subCoordinator)
             coordinator.navigationController?.setViewControllers([newVC], animated: true)

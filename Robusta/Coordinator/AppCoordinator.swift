@@ -1,10 +1,8 @@
 
-import Foundation
 import UIKit
 
 protocol Coordinator {
     var Main: MainNavigator { get }
-    var Cart: CartNavigator { get }
     var navigationController: UINavigationController? { get }
     func dismiss()
     var subCoordinator: Coordinator { get }
@@ -12,16 +10,14 @@ protocol Coordinator {
 
 class AppCoordinator: Coordinator {
     let window: UIWindow
+    var isSub: Bool
 
     lazy var Main: MainNavigator = {
         return .init(coordinator: self)
     }()
 
-    lazy var Cart: CartNavigator = {
-        return .init(coordinator: self)
-    }()
+  
     
-
     lazy var subCoordinator: Coordinator = {
         return AppCoordinator(window: window, isSub: true)
     }()
@@ -34,13 +30,12 @@ class AppCoordinator: Coordinator {
         if(isSub){
             return subNavigationController
         } else {
-            if let navigationController : UINavigationController? = UINavigationController() {
+            if let navigationController = self as? UINavigationController {
                 return navigationController
             }
             return nil
         }
     }
-    var isSub: Bool
     
     init(window: UIWindow = UIWindow(), isSub: Bool = false) {
         self.window = window
@@ -48,8 +43,9 @@ class AppCoordinator: Coordinator {
         self.window.backgroundColor = .white
     }
     
-    func start(){
-        window.rootViewController = rootViewController
+    func start() {
+        let navigation = UINavigationController(rootViewController: rootViewController)
+        window.rootViewController = navigation
         window.makeKeyAndVisible()
     }
     
@@ -59,6 +55,7 @@ class AppCoordinator: Coordinator {
     }
     
     var rootViewController: UIViewController {
-        return Main.viewController(for: .HomeViewController, coordinator: self)
+        let rootViewContoller = Main.viewController(for: .HomeViewController, coordinator: self)
+        return rootViewContoller
     }
 }

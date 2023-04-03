@@ -27,7 +27,7 @@ class GithubTableViewCell: UITableViewCell {
         githubNameLabel.text = githubRepo.fullName
         githubRepoLabel.text = githubRepo.owner?.login
         if let githubAvatar = URL(string:  (githubRepo.owner?.avatarURL)!) {
-        githubAvatarImageView.loadImage(fromURL:githubAvatar, placeHolderImage: "LaunchImage")
+        githubAvatarImageView.loadImage(fromURL: githubAvatar, placeHolderImage: "LaunchImage")
         }
     }
 }

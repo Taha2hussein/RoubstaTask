@@ -51,14 +51,14 @@ class BaseWireframe<T: BaseViewModel>: UIViewController {
         super.init(coder: coder)
     }
     
-    func bindStates(){
+    func bindStates() {
         viewModel.displayError.subscribe { [weak self] (text) in
             self?.displayError(text: text)
         }.disposed(by: disposeBag)
         
         viewModel.isLoading.subscribe { [weak self] (isLoading) in
             guard let isLoading = isLoading.element else { return }
-            if(isLoading){
+            if(isLoading) {
                 self?.view.makeToastActivity(.center)
             } else {
                 self?.view.hideToastActivity()
@@ -68,8 +68,11 @@ class BaseWireframe<T: BaseViewModel>: UIViewController {
         
         // reachability state binding
         Reachability.rx.isReachable.subscribe(onNext: { isReachable in
-            if(isReachable == false){
+            if(isReachable == false) {
                 self.displayError(text: "No network found...")
+            }
+            else{
+                print("connected")
             }
         }).disposed(by: disposeBag)
     }
