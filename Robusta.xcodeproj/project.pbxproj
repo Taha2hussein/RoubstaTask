@@ -19,6 +19,7 @@
 		0079A83029D99F0200657193 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0079A82F29D99F0200657193 /* Alamofire */; };
 		0079A83229D99F5F00657193 /* readme in Resources */ = {isa = PBXBuildFile; fileRef = 0079A83129D99F5F00657193 /* readme */; };
 		0079A83629D9A03F00657193 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0079A83529D9A03F00657193 /* Colors.xcassets */; };
+		008FDBDE29DC2E1700CFF047 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008FDBDD29DC2E1700CFF047 /* NetworkServiceTests.swift */; };
 		00DB110529DA0D8E003CDA6A /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DB110329DA0D8E003CDA6A /* HomeDetailViewController.swift */; };
 		00DB110629DA0D8E003CDA6A /* HomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00DB110429DA0D8E003CDA6A /* HomeDetailViewController.xib */; };
 		00DB110829DAB1B2003CDA6A /* HomeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DB110729DAB1B2003CDA6A /* HomeDetailViewModel.swift */; };
@@ -51,6 +52,16 @@
 		00EE717A29D9DDFC009F8205 /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE717929D9DDFC009F8205 /* LazyImageView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		008FDBD829DC2D8600CFF047 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0079A80229D99E1600657193 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0079A80929D99E1600657193;
+			remoteInfo = Robusta;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0079A80A29D99E1600657193 /* Robusta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Robusta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0079A80D29D99E1600657193 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +72,8 @@
 		0079A81E29D99E1B00657193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0079A83129D99F5F00657193 /* readme */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme; sourceTree = "<group>"; };
 		0079A83529D9A03F00657193 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		008FDBD429DC2D8600CFF047 /* RobustaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobustaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		008FDBDD29DC2E1700CFF047 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		00DB110329DA0D8E003CDA6A /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		00DB110429DA0D8E003CDA6A /* HomeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDetailViewController.xib; sourceTree = "<group>"; };
 		00DB110729DAB1B2003CDA6A /* HomeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewModel.swift; sourceTree = "<group>"; };
@@ -106,6 +119,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		008FDBD129DC2D8600CFF047 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -114,6 +134,7 @@
 			children = (
 				0079A83129D99F5F00657193 /* readme */,
 				0079A80C29D99E1600657193 /* Robusta */,
+				008FDBD529DC2D8600CFF047 /* RobustaTests */,
 				0079A80B29D99E1600657193 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				0079A80A29D99E1600657193 /* Robusta.app */,
+				008FDBD429DC2D8600CFF047 /* RobustaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,6 +185,14 @@
 				0079A81E29D99E1B00657193 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		008FDBD529DC2D8600CFF047 /* RobustaTests */ = {
+			isa = PBXGroup;
+			children = (
+				008FDBDD29DC2E1700CFF047 /* NetworkServiceTests.swift */,
+			);
+			path = RobustaTests;
 			sourceTree = "<group>";
 		};
 		00DB110229DA0D73003CDA6A /* Home Detail */ = {
@@ -333,6 +363,24 @@
 			productReference = 0079A80A29D99E1600657193 /* Robusta.app */;
 			productType = "com.apple.product-type.application";
 		};
+		008FDBD329DC2D8600CFF047 /* RobustaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 008FDBDA29DC2D8600CFF047 /* Build configuration list for PBXNativeTarget "RobustaTests" */;
+			buildPhases = (
+				008FDBD029DC2D8600CFF047 /* Sources */,
+				008FDBD129DC2D8600CFF047 /* Frameworks */,
+				008FDBD229DC2D8600CFF047 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				008FDBD929DC2D8600CFF047 /* PBXTargetDependency */,
+			);
+			name = RobustaTests;
+			productName = RobustaTests;
+			productReference = 008FDBD429DC2D8600CFF047 /* RobustaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -345,6 +393,11 @@
 				TargetAttributes = {
 					0079A80929D99E1600657193 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					008FDBD329DC2D8600CFF047 = {
+						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
+						TestTargetID = 0079A80929D99E1600657193;
 					};
 				};
 			};
@@ -368,6 +421,7 @@
 			projectRoot = "";
 			targets = (
 				0079A80929D99E1600657193 /* Robusta */,
+				008FDBD329DC2D8600CFF047 /* RobustaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -384,6 +438,13 @@
 				00EE716329D9A712009F8205 /* HomeViewController.xib in Resources */,
 				0079A81D29D99E1B00657193 /* LaunchScreen.storyboard in Resources */,
 				0079A81A29D99E1B00657193 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		008FDBD229DC2D8600CFF047 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +487,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		008FDBD029DC2D8600CFF047 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				008FDBDE29DC2E1700CFF047 /* NetworkServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		008FDBD929DC2D8600CFF047 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0079A80929D99E1600657193 /* Robusta */;
+			targetProxy = 008FDBD829DC2D8600CFF047 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0079A81B29D99E1B00657193 /* LaunchScreen.storyboard */ = {
@@ -610,6 +687,53 @@
 			};
 			name = Release;
 		};
+		008FDBDB29DC2D8600CFF047 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Andela.RobustaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Robusta.app/Robusta";
+			};
+			name = Debug;
+		};
+		008FDBDC29DC2D8600CFF047 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Andela.RobustaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Robusta.app/Robusta";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -627,6 +751,15 @@
 			buildConfigurations = (
 				0079A82229D99E1B00657193 /* Debug */,
 				0079A82329D99E1B00657193 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		008FDBDA29DC2D8600CFF047 /* Build configuration list for PBXNativeTarget "RobustaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				008FDBDB29DC2D8600CFF047 /* Debug */,
+				008FDBDC29DC2D8600CFF047 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
